@@ -18,7 +18,7 @@ func read(conn net.Conn) {
 func write(conn net.Conn) {
 	//TODO Continually get input from the user and send messages to the server.
 	stdin := bufio.NewReader(os.Stdin)
-	fmt.Println("text: ")
+	fmt.Printf("text: ")
 	msg, _ := stdin.ReadString('\n')
 	fmt.Fprintf(conn, msg)
 }
